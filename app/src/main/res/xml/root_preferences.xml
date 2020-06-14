@@ -1,0 +1,58 @@
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/settings_label">
+        <EditTextPreference
+            app:defaultValue="Gemüse"
+            app:key="pref_valve_a"
+            app:title="@string/main_swA"
+            app:useSimpleSummaryProvider="true" />
+        <EditTextPreference
+            app:defaultValue="Tomaten"
+            app:key="pref_valve_b"
+            app:title="@string/main_swB"
+            app:useSimpleSummaryProvider="true" />
+        <EditTextPreference
+            app:defaultValue="Rasen"
+            app:key="pref_valve_c"
+            app:title="@string/main_swC"
+            app:useSimpleSummaryProvider="true" />
+        <EditTextPreference
+            app:defaultValue="Steingarten"
+            app:key="pref_valve_d"
+            app:title="@string/main_swD"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/settings_messages">
+        <EditTextPreference
+            app:defaultValue="YardControl"
+            app:key="pref_prefix"
+            app:title="@string/settings_prefix"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/settings_broker">
+        <EditTextPreference
+            app:enabled="true"
+            app:key="pref_broker"
+            app:title="@string/settings_uri"
+            app:defaultValue="tcp://mqtt.example.com:1338"
+            app:useSimpleSummaryProvider="true" />
+        <EditTextPreference
+            app:enabled="true"
+            app:key="pref_username"
+            app:title="@string/settings_username"
+            app:defaultValue="username"
+            app:useSimpleSummaryProvider="true" />
+        <EditTextPreference
+            app:enabled="true"
+            app:key="pref_password"
+            app:title="@string/settings_password"
+            android:inputType="textPassword"
+            android:imeOptions="flagNoExtractUi"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
