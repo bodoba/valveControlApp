@@ -35,7 +35,6 @@ class AddEventActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_event)
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
-        var summary = ""
 
         startMqtt()
 
@@ -75,7 +74,7 @@ class AddEventActivity : AppCompatActivity() {
             minute=m
             updateSummary()
             findViewById<TextView>(R.id.time).apply {
-                setText("${time}h")
+                text=  "${time}h"
             }
         }, hour, minute, true)
         timeDialog.show()
@@ -132,7 +131,7 @@ class AddEventActivity : AppCompatActivity() {
         updateSummary()
     }
 
-    fun btAddCB ( view: View ) {
+    fun btAddCB (notio view: View ) {
         val topic = "/" + sharedPreferences.getString("pref_prefix", "YardControl") + "/Command/addEvent"
         mqttHelper.mqttAndroidClient.publish(topic, "$valve $state $time".toByteArray(), 1 ,false)
         this.finish()

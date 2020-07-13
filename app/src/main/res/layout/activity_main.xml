@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:background="@color/not_so_dark_grey"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:menu="@menu/settings" />
@@ -21,7 +22,7 @@
         android:id="@+id/textView3"
         android:layout_width="222dp"
         android:layout_height="32dp"
-        android:layout_marginLeft="16dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/main_title"
         android:textColor="@android:color/background_light"
@@ -41,7 +42,6 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
 
-
     <TextView
         android:id="@+id/online"
         android:layout_width="wrap_content"
@@ -51,18 +51,20 @@
         android:text="@string/connected"
         android:textColor="#01579B"
         app:layout_constraintBottom_toBottomOf="@+id/textView3"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView3" />
 
     <TextView
         android:id="@+id/tvVentA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:text="Ventil A"
         android:textColor="@android:color/background_light"
         android:textSize="22sp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:fontFamily="@font/finger_paint"
+        app:layout_constraintStart_toEndOf="@+id/labelA"
         app:layout_constraintTop_toTopOf="@+id/btVentA_Ein" />
 
     <RadioButton
@@ -80,8 +82,8 @@
         android:id="@+id/btVentA_Ein"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
         android:onClick="buttonPressCB"
         android:text="Ein"
         app:layout_constraintEnd_toStartOf="@+id/btVentA_Aus"
@@ -92,8 +94,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:onClick="buttonPressCB"
         android:text="Aus"
         app:layout_constraintEnd_toEndOf="parent"
@@ -104,12 +106,13 @@
         android:id="@+id/tvVentB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:text="Ventil B"
         android:textColor="@android:color/background_light"
         android:textSize="22sp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:fontFamily="@font/finger_paint"
+        app:layout_constraintStart_toEndOf="@+id/labelB"
         app:layout_constraintTop_toTopOf="@+id/btVentB_Ein" />
 
     <RadioButton
@@ -125,23 +128,23 @@
 
     <Button
         android:id="@+id/btVentB_Ein"
-        android:onClick="buttonPressCB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:onClick="buttonPressCB"
         android:text="Ein"
         app:layout_constraintEnd_toStartOf="@+id/btVentB_Aus"
         app:layout_constraintTop_toTopOf="@+id/btVentB_Aus" />
 
     <Button
         android:id="@+id/btVentB_Aus"
-        android:onClick="buttonPressCB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:onClick="buttonPressCB"
         android:text="Aus"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btVentA" />
@@ -150,12 +153,13 @@
         android:id="@+id/tvVentC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:text="Ventil C"
         android:textColor="@android:color/background_light"
         android:textSize="22sp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:fontFamily="@font/finger_paint"
+        app:layout_constraintStart_toEndOf="@+id/labelC"
         app:layout_constraintTop_toTopOf="@+id/btVentC_Ein" />
 
     <RadioButton
@@ -171,23 +175,23 @@
 
     <Button
         android:id="@+id/btVentC_Ein"
-        android:onClick="buttonPressCB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:onClick="buttonPressCB"
         android:text="Ein"
         app:layout_constraintEnd_toStartOf="@+id/btVentC_Aus"
         app:layout_constraintTop_toTopOf="@+id/btVentC_Aus" />
 
     <Button
         android:id="@+id/btVentC_Aus"
-        android:onClick="buttonPressCB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:onClick="buttonPressCB"
         android:text="Aus"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btVentB" />
@@ -197,21 +201,22 @@
         android:id="@+id/tvVentD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:text="Ventil D"
         android:textColor="@android:color/background_light"
         android:textSize="22sp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:fontFamily="@font/finger_paint"
+        app:layout_constraintStart_toEndOf="@+id/labelD"
         app:layout_constraintTop_toTopOf="@+id/btVentD_Ein" />
 
     <RadioButton
         android:id="@+id/btVentD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
+        android:layout_marginTop="2dp"
         android:button="@drawable/on_off"
         android:clickable="false"
         android:focusable="false"
@@ -220,23 +225,23 @@
 
     <Button
         android:id="@+id/btVentD_Ein"
-        android:onClick="buttonPressCB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:onClick="buttonPressCB"
         android:text="Ein"
         app:layout_constraintEnd_toStartOf="@+id/btVentD_Aus"
         app:layout_constraintTop_toTopOf="@+id/btVentD_Aus" />
 
     <Button
         android:id="@+id/btVentD_Aus"
-        android:onClick="buttonPressCB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:onClick="buttonPressCB"
         android:text="Aus"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btVentC" />
@@ -245,7 +250,7 @@
         android:id="@+id/divider4"
         android:layout_width="0dp"
         android:layout_height="1dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="48dp"
         android:background="@android:color/darker_gray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -275,23 +280,23 @@
 
     <Button
         android:id="@+id/btTimer_Ein"
-        android:onClick="buttonPressCB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:onClick="buttonPressCB"
         android:text="Ein"
         app:layout_constraintEnd_toStartOf="@+id/btTimer_Aus"
         app:layout_constraintTop_toTopOf="@+id/btTimer_Aus" />
 
     <Button
         android:id="@+id/btTimer_Aus"
-        android:onClick="buttonPressCB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:onClick="buttonPressCB"
         android:text="Aus"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/divider4" />
@@ -300,65 +305,129 @@
         android:id="@+id/labelA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginBottom="2dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:text="A"
         android:textColor="@android:color/darker_gray"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/tvVentA"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvVentA" />
 
     <TextView
         android:id="@+id/labelB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginBottom="2dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:text="B"
         android:textColor="@android:color/darker_gray"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/tvVentB"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvVentB" />
 
 
     <TextView
         android:id="@+id/labelC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginBottom="2dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:text="C"
         android:textColor="@android:color/darker_gray"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/tvVentC"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvVentC" />
 
     <TextView
         android:id="@+id/labelD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginBottom="2dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:text="D"
         android:textColor="@android:color/darker_gray"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/tvVentD"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvVentD" />
 
-    <Button
-        android:id="@+id/button"
+    <TextView
+        android:id="@+id/tvVentA_info"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
-        android:onClick="schedulerSettigsCB"
-        android:text="Zeitschaltuhr"
-        app:layout_constraintEnd_toEndOf="@+id/btTimer_Aus"
-        app:layout_constraintStart_toStartOf="@+id/btTimer_Ein"
-        app:layout_constraintTop_toBottomOf="@+id/btTimer_Ein" />
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="Keine Daten"
+        android:textAlignment="viewEnd"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="10sp"
+        app:fontFamily="@font/finger_paint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btVentA_Ein" />
+
+    <TextView
+        android:id="@+id/tvVentB_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="Keine Daten"
+        android:textAlignment="viewEnd"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="10sp"
+        app:fontFamily="@font/finger_paint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btVentB_Ein" />
+
+    <TextView
+        android:id="@+id/tvVentC_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="Keine Daten"
+        android:textAlignment="viewEnd"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="10sp"
+        app:fontFamily="@font/finger_paint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btVentC_Ein" />
+
+    <TextView
+        android:id="@+id/tvVentD_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="Keine Daten"
+        android:textAlignment="viewEnd"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="10sp"
+        app:fontFamily="@font/finger_paint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btVentD_Ein" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
